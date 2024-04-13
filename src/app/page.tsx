@@ -1,14 +1,16 @@
 import IsMeComp from "@/components/me/IsMe";
+import HomeLeftContainer from '@/components/wrapper/HomeLeftContainer';
+import HomeRightContainer from '@/components/wrapper/HomeRightContainer';
 
 export default function Home() {
   return (
     <div className="lg:flex h-full">
-      <div className="border-r border-solid border-zinc-100 sm:px-48 lg:my-24 py-24 text-center">
+      <HomeLeftContainer>
         <IsMeComp />
-      </div>
-      <div>
+      </HomeLeftContainer>
+      <HomeRightContainer>
         Home
-      </div>
+      </HomeRightContainer>
     </div>
   );
 }
