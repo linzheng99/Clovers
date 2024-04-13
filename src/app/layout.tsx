@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-import FooterComp from "@/components/Footer";
-
-const inter = Inter({ subsets: ["latin"] });
+import '@radix-ui/themes/styles.css';
+import { Theme } from '@radix-ui/themes';
+import { ThemeProvider } from 'next-themes';
 
 export const metadata: Metadata = {
   title: "Clovers",
@@ -16,12 +15,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="m-0 h-full p-0 font-sans antialiased">
-      <body className="h-full">
-        <div className="h-full">
-          {children}
-        </div>
-        <FooterComp />
+    <html lang="en" className="m-0 h-full p-0">
+      <body>
+        <ThemeProvider attribute="class">
+          <Theme className="h-full dark">
+            <div className="h-full">
+              {children}
+            </div>
+          </Theme>
+        </ThemeProvider>
       </body>
     </html>
   );
