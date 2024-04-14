@@ -1,4 +1,4 @@
-import { GithubIcon, TwitterIcon } from '@/components/icons';
+import { GithubIcon, TwitterIcon, LocalIcon } from '@/components/icons';
 
 export interface Apps {
   name: string
@@ -6,9 +6,19 @@ export interface Apps {
   icon: () => JSX.Element
 }
 
-export const userInfo: Recordable = {
-  name: 'LinZheng',
+export interface Info {
+  name: string
+  content: string
+  icon: () => JSX.Element
 }
+
+export const userInfo: Info[] = [
+  {
+    name: 'Local',
+    content: 'Wenzhou, Zhejiang, China',
+    icon: LocalIcon,
+  }
+]
 
 export const apps: Apps[] = [
   {
