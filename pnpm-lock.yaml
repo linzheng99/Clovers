@@ -25,6 +25,12 @@ dependencies:
     version: 3.39.3(react-dom@18.2.0)(react@18.2.0)
 
 devDependencies:
+  '@iconify-json/codicon':
+    specifier: ^1.1.46
+    version: 1.1.46
+  '@iconify/tailwind':
+    specifier: ^0.1.4
+    version: 0.1.4
   '@types/node':
     specifier: ^20
     version: 20.12.5
@@ -154,6 +160,22 @@ packages:
 
   /@humanwhocodes/object-schema@2.0.3:
     resolution: {integrity: sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA==}
+    dev: true
+
+  /@iconify-json/codicon@1.1.46:
+    resolution: {integrity: sha512-efAc2tFRrLJguNktAWza8pLhLCYhwWjQzUm6CXzXzxU18uCW2Mqzn2rJ+WhdLl+VQVxLFtvXcMMg9Gq5UOw1jA==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify/tailwind@0.1.4:
+    resolution: {integrity: sha512-U7RzcU2fkwOfMDsGQ3mtpLIaApSnqb+vgcJJknPPbg8/NF5s7tI1o5otEMfcpnLGk4PbYB8bxmKTz7IJVUlU2Q==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify/types@2.0.0:
+    resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
     dev: true
 
   /@isaacs/cliui@8.0.2:
