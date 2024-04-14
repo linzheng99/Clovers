@@ -1,7 +1,9 @@
+import { GithubIcon, TwitterIcon } from '@/components/icons';
+
 export interface Apps {
   name: string
   href: string
-  icon: string
+  icon: () => JSX.Element
 }
 
 export const userInfo: Recordable = {
@@ -12,16 +14,16 @@ export const apps: Apps[] = [
   {
     name: 'Github',
     href: 'https://github.com/linzhengGithub',
-    icon: 'icon-[codicon--github-inverted]'
+    icon: GithubIcon
   },
   {
     name: 'Twitter',
     href: '',
-    icon: 'icon-[codicon--twitter]'
+    icon: TwitterIcon
   },
-  {
-    name: 'Music',
-    href: '',
-    icon: 'icon-[codicon--music]'
-  },
+  // {
+  //   name: 'Music',
+  //   href: '',
+  //   icon: 'icon-[codicon--music]'
+  // },
 ]
