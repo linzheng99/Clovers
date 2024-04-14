@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import '@radix-ui/themes/styles.css';
 import { Theme } from '@radix-ui/themes';
-import { ThemeProvider } from 'next-themes';
 
 export const metadata: Metadata = {
   title: "Clovers",
@@ -15,15 +14,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="m-0 h-full p-0">
+    <html lang="en">
       <body>
-        <ThemeProvider attribute="class">
-          <Theme className="h-full dark">
-            <div className="h-full">
-              {children}
-            </div>
-          </Theme>
-        </ThemeProvider>
+        <Theme className="h-full dark">
+          {children}
+        </Theme>
       </body>
     </html>
   );
