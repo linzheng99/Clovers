@@ -5,7 +5,7 @@ import SocialLink from '@/components/links/SocialLink';
 
 export default function IsMeComp() {
   return (
-    <div className='flex flex-col items-center gap-4'>
+    <div className='flex flex-col items-center gap-4 sticky top-40'>
       <Avatar src="/images/avatar.jpg" fallback="Avatar" size="9" radius="full" />
       <div className='font-bold text-2xl'>
         LinZheng
