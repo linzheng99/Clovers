@@ -1,6 +1,6 @@
 'use client'
 
-import { useScroll, motion } from 'framer-motion';
+import { useScroll, motion, useTransform } from 'framer-motion';
 import { useRef } from "react"
 
 export interface Card {
@@ -13,12 +13,15 @@ export default function CardComp({ card }: { card: Card }) {
     target: ref,
     offset: ['0 1', '1.33 1']
   })
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1])
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1])
+
   return (
     <motion.div
       ref={ref}
       style={{
-        scale: scrollYProgress,
-        opacity: scrollYProgress
+        scale: scaleProgress,
+        opacity: opacityProgress
       }}
       className="h-[300px] bg-blue-600 flex items-center justify-center mb-4"
     >

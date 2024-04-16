@@ -4,7 +4,7 @@ export default function HomeLeftContainer({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="lg:my-20 ml-6 lg:ml-8 flex-1">
+    <div className="lg:my-20 mx-6 lg:mx-8 flex-1">
       {children}
     </div>
   )
