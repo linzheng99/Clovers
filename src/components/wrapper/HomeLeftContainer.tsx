@@ -1,3 +1,5 @@
+import EaseInOut from '@/components/transition/EaseInOut';
+
 export default function HomeLeftContainer({
   children
 }: Readonly<{
@@ -5,7 +7,9 @@ export default function HomeLeftContainer({
 }>) {
   return (
     <div className="border-solid border-zinc-100 lg:border-r lg:my-20 py-20 sm:px-40 text-center">
-      {children}
+      <EaseInOut>
+        {children}
+      </EaseInOut>
     </div>
   )
 };
