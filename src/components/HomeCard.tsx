@@ -18,6 +18,12 @@ const cardList: Card[] = [
   {
     href: 'blog',
   },
+  {
+    href: 'blog1',
+  },
+  {
+    href: 'blog2',
+  },
 ]
 
 export default function HomeCard() {
