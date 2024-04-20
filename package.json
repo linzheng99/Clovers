@@ -6,16 +6,26 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "sanity": "cd sanity && sanity start",
     "lint": "next lint"
   },
   "dependencies": {
     "@radix-ui/themes": "^3.0.2",
+    "@sanity/cli": "^3.38.0",
+    "@sanity/client": "^6.15.19",
+    "@sanity/image-url": "^1.0.2",
+    "@sanity/vision": "^3.38.0",
     "framer-motion": "^11.0.28",
     "next": "14.1.4",
+    "next-sanity": "^7.1.4",
+    "next-sanity-image": "^6.1.1",
     "next-themes": "^0.3.0",
     "react": "^18",
     "react-dom": "^18",
-    "react-query": "^3.39.3"
+    "react-query": "^3.39.3",
+    "sanity": "^3.38.0",
+    "styled-components": "^6.1.8",
+    "zod": "^3.22.5"
   },
   "devDependencies": {
     "@iconify-json/codicon": "^1.1.46",

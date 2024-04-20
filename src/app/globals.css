@@ -24,6 +24,15 @@ body {
       rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -36,7 +45,8 @@ iconify-icon {
   height: 1em;
 }
 
-ul, li {
+ul,
+li {
   list-style: none;
   padding: 0;
   margin: 0;
