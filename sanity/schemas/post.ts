@@ -57,18 +57,17 @@ export default defineType({
       name: 'publishedAt',
       title: '发布时间',
       type: 'datetime',
+      options: {
+        dateFormat: 'YYYY-MM-DD',
+      }
     }),
   ],
 
   preview: {
     select: {
       title: 'title',
-      author: 'author.name',
+      author: 'slug',
       media: 'mainImage',
-    },
-    prepare(selection) {
-      const { author } = selection
-      return { ...selection, subtitle: author && `by ${author}` }
     },
   },
 })

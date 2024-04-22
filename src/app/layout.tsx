@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   description: "lin zheng's website",
 };
 
+// TODO fetch cache
+export const revalidate = 500
+
 export default function RootLayout({
   children,
 }: Readonly<{
