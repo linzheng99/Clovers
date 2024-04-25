@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@portabletext/react": "^3.0.18",
     "@radix-ui/themes": "^3.0.2",
     "@sanity/cli": "^3.38.0",
     "@sanity/client": "^6.15.19",
