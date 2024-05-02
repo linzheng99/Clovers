@@ -1,39 +1,26 @@
-import CardComp from '@/components/ui/Card';
-import type { Card } from '@/components/ui/Card';
 import React from 'react';
 
-const cardList: Card[] = [
-  {
-    href: 'home',
-  },
-  {
-    href: 'about',
-  },
-  {
-    href: 'a',
-  },
-  {
-    href: 'b',
-  },
-  {
-    href: 'blog',
-  },
-  {
-    href: 'blog1',
-  },
-  {
-    href: 'blog2',
-  },
-]
+import { getBlogs } from '~/sanity/query/post';
+
+import MotionCard from './ui/MotionCard';
 
 export default function HomeCard() {
   return (
     <div>
-      {
-        cardList.map((card) => (
-          <CardComp card={card} key={card.href} />
-        ))
-      }
+      <LatestBlog />
     </div>
   )
 };
+
+// 博客(latest)
+async function LatestBlog() {
+  const blogs = await getBlogs()
+
+  return (
+    <div className='flex flex-col gap-12'>
+      {
+        blogs.map(blog => <MotionCard key={blog.slug} post={blog} />)
+      }
+    </div>
+  )
+}
