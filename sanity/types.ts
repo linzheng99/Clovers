@@ -3,7 +3,7 @@ export interface Post {
   title:string
   slug: string
   mainImage: string
-  categories: string
+  categories: string[]
   // TODO body type
   body: any
   description: string

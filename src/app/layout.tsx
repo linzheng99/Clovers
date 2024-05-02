@@ -1,7 +1,10 @@
-import type { Metadata } from "next";
 import "./globals.css";
 import '@radix-ui/themes/styles.css';
-import { Theme } from '@radix-ui/themes';
+
+import { Theme } from "@radix-ui/themes";
+import type { Metadata } from "next";
+
+import HeaderComp from '@/components/Header';
 
 export const metadata: Metadata = {
   title: "Clovers",
@@ -19,7 +22,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Theme className="h-full dark">
+        <Theme className="h-full dark overflow-x-hidden">
+          <HeaderComp />
           {children}
         </Theme>
       </body>

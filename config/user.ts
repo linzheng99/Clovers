@@ -1,4 +1,4 @@
-import { GithubIcon, TwitterIcon, LocalIcon } from '~/src/assets/icons';
+import { GithubIcon, LocalIcon, TwitterIcon } from '~/src/assets/icons';
 
 export interface Apps {
   name: string

@@ -1,19 +1,22 @@
-import type { Info } from '~/config';
-import { userInfo } from '~/config';
 import { Avatar } from '@radix-ui/themes';
+
 import SocialLink from '@/components/links/SocialLink';
 import EaseInOut from '@/components/transition/EaseInOut';
+import type { Info } from '~/config';
+import { userInfo } from '~/config';
 
 export default function IsMeComp() {
   return (
-    <div className='flex flex-col items-center gap-4 sticky top-40'>
+    <div className='sticky top-40'>
       <EaseInOut>
-        <Avatar src="/images/avatar.jpg" fallback="Avatar" size="9" radius="full" />
-        <div className='font-bold text-2xl'>
-          Lin Zheng
+        <div className='flex flex-col items-center gap-4'>
+          <Avatar src="/images/avatar.jpg" fallback="Avatar" size="9" radius="full" />
+          <div className='font-bold text-2xl'>
+            Lin Zheng
+          </div>
+          <UserInfo info={userInfo} />
+          <SocialLink />
         </div>
-        <UserInfo info={userInfo} />
-        <SocialLink />
       </EaseInOut>
     </div>
   )
