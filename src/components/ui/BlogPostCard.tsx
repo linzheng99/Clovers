@@ -1,7 +1,8 @@
 import dayjs from "dayjs";
 import Image from "next/image";
 import Link from "next/link";
-import { Post } from "~/sanity/types";
+
+import { type Post } from "~/sanity/types";
 
 
 export default function BlogPostCard({ post }: { post: Post }) {

@@ -1,8 +1,9 @@
 import IsMeComp from "@/components/me/IsMe";
 import HomeLeftContainer from '@/components/wrapper/HomeLeftContainer';
 import HomeRightContainer from '@/components/wrapper/HomeRightContainer';
-import FloatNav from '@/components/FloatNav';
+
 import HomeCard from "../components/HomeCard";
+import AboutMeComp from "../components/me/AboutMe";
 
 
 export default function Home() {
@@ -12,9 +13,9 @@ export default function Home() {
         <IsMeComp />
       </HomeLeftContainer>
       <HomeRightContainer>
+        <AboutMeComp />
         <HomeCard />
       </HomeRightContainer>
-      <FloatNav />
     </div>
   );
 }
