@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Theme className="h-full dark overflow-x-hidden">
+        <Theme className="h-full dark">
           <HeaderComp />
           {children}
         </Theme>
