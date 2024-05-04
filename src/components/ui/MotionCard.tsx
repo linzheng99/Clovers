@@ -10,7 +10,7 @@ export default function MotionCard({ post }: { post: Post }) {
   const { slug, mainImage, title, categories, description } = post
 
   return (
-    <Link id={slug} key={slug} href={'#' + slug}>
+    <Link id={slug} key={slug} href={'blogs/' + slug}>
       <div className='flex flex-wrap'>
         <motion.div
           whileInView={{ opacity: 1, x: 0 }}
