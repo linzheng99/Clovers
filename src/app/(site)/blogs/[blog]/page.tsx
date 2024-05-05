@@ -1,5 +1,6 @@
-import { getBlog } from '~/sanity/query/post';
 import { PortableText } from '@portabletext/react';
+
+import { getBlog } from '~/sanity/query/post';
 
 interface Props {
   params: { blog: string }
