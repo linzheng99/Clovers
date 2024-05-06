@@ -3,10 +3,10 @@ import { PortableText } from '@portabletext/react';
 import { getBlog } from '~/sanity/query/post';
 
 interface Props {
-  params: { blog: string }
+  params: { slug: string }
 }
 export default async function Blog({ params }: Props) {
-  const slug = params.blog
+  const slug = params.slug
   const blog = await getBlog(slug)
 
   return (
