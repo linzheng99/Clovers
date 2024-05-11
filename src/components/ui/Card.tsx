@@ -1,13 +1,11 @@
 'use client'
 
-import { useScroll, motion, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from "react"
 
-export interface Card {
-  href: string
-}
+import { type Post } from '~/sanity/types';
 
-export default function CardComp({ card }: { card: Card }) {
+export default function CardComp({ card }: { card: Post }) {
   const ref = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -26,7 +24,7 @@ export default function CardComp({ card }: { card: Card }) {
       className="h-[300px] bg-blue-600 flex items-center justify-center mb-4"
     >
       <section>
-        {card.href}
+        {card.description}
       </section>
     </motion.div>
   )
