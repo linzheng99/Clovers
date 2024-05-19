@@ -25,7 +25,7 @@ const NavLinks: NavLink[] = [
     name: "博客"
   },
   {
-    href: "/lifestyle",
+    href: "/life",
     icon: "",
     name: "生活"
   }

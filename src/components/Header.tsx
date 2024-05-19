@@ -1,13 +1,9 @@
-import EaseInOut from '@/components/transition/EaseInOut';
-
-import Navigation from './FloatNav';
+import Navigation from './Navigation';
 
 export default function HeaderComp() {
   return (
-    <header className="fixed border-1 w-full h-20 flex items-center justify-center">
-      <EaseInOut initialY={-20}>
-        <Navigation />
-      </EaseInOut>
+    <header className="sticky inset-x-0 top-4 z-50 flex flex-wrap text-sm md:flex-nowrap md:justify-start mx-4 h-16">
+      <Navigation />
     </header>
   )
 };

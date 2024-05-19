@@ -1,4 +1,6 @@
+export * from './CloseIcon'
 export * from './GithubIcon'
-export * from './TwitterIcon'
 export * from './LocalIcon'
+export * from './MenuIcon'
 export * from './PencilSwooshIcon'
+export * from './TwitterIcon'

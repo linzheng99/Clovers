@@ -1,23 +1,24 @@
 {
   "author": "Lin Zheng",
+  "site": "Clovers",
   "hero": {
     "position": "Front-end development",
     "description": "哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈"
   },
   "navigation": [
     {
-      "title": "首页",
+      "title": "Home",
       "href": "/",
       "icon": ""
     },
     {
-      "title": "博客",
+      "title": "Blogs",
       "href": "/blogs",
       "icon": ""
     },
     {
-      "title": "生活",
-      "href": "/lifestyle",
+      "title": "Life",
+      "href": "/life",
       "icon": ""
     }
   ],
