@@ -41,7 +41,7 @@ export default function NavigationComp() {
           <div className="mt-5 flex flex-col gap-x-0 gap-y-4 md:mt-0 md:flex-row md:items-center md:justify-end md:gap-x-4 lg:gap-x-7 md:gap-y-0 md:ps-7">
             {links.map(link =>
               <Link href={link.href} key={link.href} className="rounded-lg text-base font-medium outline-none  focus-visible:ring text-neutral-400 ring-zinc-200 hover:text-neutral-500 focus:outline-none md:py-3 md:text-sm 2xl:text-base">
-                <span className={cn(isActivate(link.href) ? 'text-purple-400': '')}>
+                <span className={cn(isActivate(link.href) ? 'text-[#d65fcf]': '')}>
                   {link.title}
                 </span>
               </Link>)}
