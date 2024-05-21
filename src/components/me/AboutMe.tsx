@@ -40,14 +40,14 @@ export default function AboutMeComp() {
             {appConfig.hero.position}
           </span>
         </motion.h1>
-        <motion.p
+        <motion.div
           variants={container(1.2)}
           initial="hidden"
           animate="visible"
-          className="max-w-xl mt-8 font-light tracking-tighter"
+          className="max-w-xl mt-8 font-light tracking-tighter float-right"
         >
-          {appConfig.hero.description}
-        </motion.p>
+          {appConfig.hero.description.map((desc, index) => <p key={index} className='float-right'>{desc}</p>)}
+        </motion.div>
       </div>
     </div>
   )
