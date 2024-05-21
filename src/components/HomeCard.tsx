@@ -17,7 +17,7 @@ async function LatestBlog() {
   const blogs = await getBlogs()
 
   return (
-    <div className='flex flex-col gap-12 mt-12'>
+    <div className='flex flex-col gap-12 mt-12 lg:mt-0'>
       <h1 className='mx-auto text-3xl'>最新博客</h1>
       {
         blogs.map(blog => <MotionCard key={blog.slug} post={blog} />)

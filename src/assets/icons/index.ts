@@ -1,4 +1,5 @@
 export * from './CloseIcon'
+export * from './DownIcon'
 export * from './GithubIcon'
 export * from './LocalIcon'
 export * from './MenuIcon'

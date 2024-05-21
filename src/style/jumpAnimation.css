@@ -1,0 +1,19 @@
+  /* 定义动画 */
+  @keyframes jump {
+    0% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  /* 应用动画到元素 */
+  .jumping-element {
+    animation: jump 1s infinite;
+  }

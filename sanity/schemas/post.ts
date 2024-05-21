@@ -1,4 +1,5 @@
 import { defineField, defineType } from 'sanity'
+
 import { PencilSwooshIcon } from '~/src/assets/icons';
 
 export default defineType({

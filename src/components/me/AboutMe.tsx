@@ -1,7 +1,11 @@
 'use client'
+import '@/style/jumpAnimation.css'
+
 import { motion } from 'framer-motion';
 
 import appConfig from '@/app.config.json';
+import { DownIcon } from '@/assets/icons';
+import EaseInOut from '@/components/transition/EaseInOut';
 
 
 const container = (delay: number) => ({
@@ -15,12 +19,12 @@ const container = (delay: number) => ({
 
 export default function AboutMeComp() {
   return (
-    <div className="flex flex-col lg:mt-20 lg:mx-20 lg:h-svh">
+    <div className="flex flex-col lg:mx-20 overflow-hidden lg:h-dvh lg:min-h-[800px] lg:mt-[-4.5rem]">
       <motion.div
         variants={container(0.5)}
         initial="hidden"
         animate="visible"
-        className="mb-8"
+        className="mb-6 lg:pt-[5.5rem]"
       >
         <h1 className="text-3xl lg:text-6xl font-thin tracking-tighter">
           Hello guys, welcome!
@@ -48,6 +52,13 @@ export default function AboutMeComp() {
         >
           {appConfig.hero.description.map((desc, index) => <p key={index} className='float-right'>{desc}</p>)}
         </motion.div>
+      </div>
+      <div className='flex-1 mt-2 lg:p-20 justify-center items-end flex'>
+        <span className='jumping-element text-2xl'>
+          <EaseInOut initialY={40}>
+            <DownIcon />
+          </EaseInOut>
+        </span>
       </div>
     </div>
   )
