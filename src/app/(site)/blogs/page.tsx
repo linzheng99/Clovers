@@ -1,5 +1,6 @@
-import BlogPostCard from '@/components/ui/BlogPostCard';
 import { getBlogs } from '~/sanity/query/post';
+import BlogPostCard from '~/src/components/ui/BlogPostCard';
+
 
 export default async function BlogsPage() {
   const blogs = await getBlogs()

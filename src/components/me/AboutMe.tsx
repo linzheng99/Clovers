@@ -44,7 +44,7 @@ export default function AboutMeComp() {
           variants={container(1.2)}
           initial="hidden"
           animate="visible"
-          className="max-w-xl mt-8 font-light tracking-tighter float-right"
+          className="max-w-xl mt-8 font-light tracking-tighter flex flex-col"
         >
           {appConfig.hero.description.map((desc, index) => <p key={index} className='float-right'>{desc}</p>)}
         </motion.div>

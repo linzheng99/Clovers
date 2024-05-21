@@ -1,15 +1,29 @@
+'use client'
+
 import dayjs from "dayjs";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
 import { type Post } from "~/sanity/types";
 
-
 export default function BlogPostCard({ post }: { post: Post }) {
   const { _id, slug, mainImage, title, categories, publishedAt } = post
+  const MotionLink = motion(Link)
 
   return (
-    <Link key={_id} href={`/blogs/${slug}`} className='group border border-gray-500 rounded-2xl transition-transform hover:-translate-y-0.5'>
+    <MotionLink
+      key={_id}
+      href={`/blogs/${slug}`}
+      className='group border border-gray-500 rounded-2xl'
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 0.8,
+        delay: 0.5,
+        ease: [0, 0.71, 0.2, 1.01]
+      }}
+    >
       {mainImage &&
         <Image
           src={mainImage}
@@ -32,6 +46,6 @@ export default function BlogPostCard({ post }: { post: Post }) {
           </span>
         </span>
       </div>
-    </Link>
+    </MotionLink>
   )
 };
