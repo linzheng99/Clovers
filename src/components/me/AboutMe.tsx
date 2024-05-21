@@ -23,7 +23,7 @@ export default function AboutMeComp() {
         className="mb-8"
       >
         <h1 className="text-3xl lg:text-6xl font-thin tracking-tighter">
-          Welcome to my website
+          Hello guys, welcome!
         </h1>
       </motion.div>
       <div className="flex flex-col items-end lg:mt-40">
@@ -34,7 +34,7 @@ export default function AboutMeComp() {
           className="text-4xl tracking-tighter flex flex-col"
         >
           <span className='text-end'>
-            Hi, I&apos;m a
+            I&apos;m a
           </span>
           <span className="text-end font-bold bg-gradient-to-r from-[#FF96F9] via-[#d65fcf] to-[#C32BAC] bg-clip-text text-transparent">
             {appConfig.hero.position}
