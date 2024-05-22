@@ -56,7 +56,10 @@ export default function AboutMeComp() {
       <div className='flex-1 mt-2 lg:p-20 justify-center items-end flex'>
         <span className='jumping-element text-2xl'>
           <EaseInOut initialY={40}>
-            <DownIcon />
+            <div className='flex flex-col justify-center items-center'>
+              <span className='text-xs'>去享受生活,热爱生活</span>
+              <DownIcon />
+            </div>
           </EaseInOut>
         </span>
       </div>
