@@ -23,7 +23,7 @@ export const userInfo: Info[] = [
 export const apps: Apps[] = [
   {
     name: 'Github',
-    href: 'https://github.com/linzhengGithub',
+    href: 'https://github.com/linzheng99',
     icon: GithubIcon
   },
   {
