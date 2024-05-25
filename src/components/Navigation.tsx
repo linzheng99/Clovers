@@ -21,7 +21,7 @@ export default function NavigationComp() {
   return (
     <>
       <nav
-        className="max-w-screen-2xl relative mx-2 w-full rounded-[36px] items-center border px-4 py-3 border-neutral-700/40 bg-neutral-800/80 backdrop-blur-md md:flex md:items-center md:justify-between md:px-6 md:py-0 lg:px-8 xl:mx-auto"
+        className="max-w-screen-2xl relative mx-2 w-full rounded-[36px] items-center border px-4 py-3 text-[#d65fcf] border-neutral-700/40 backdrop-blur-md md:flex md:items-center md:justify-between md:px-6 md:py-0 lg:px-8 xl:mx-auto"
       >
         <div className="flex items-center justify-between h-[38px]">
           <Link href="/">

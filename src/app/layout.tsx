@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Theme className="h-full">
+        <Theme className="h-full dark">
           {children}
         </Theme>
       </body>
