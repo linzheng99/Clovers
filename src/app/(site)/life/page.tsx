@@ -1,5 +1,5 @@
 export default function LifestylePage() {
   return (
-    <div>Lifestyle</div>
+    <div>尽情期待...</div>
   );
 }
