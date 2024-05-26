@@ -1,6 +1,7 @@
 {
   "author": "Lin Zheng",
   "site": "Clovers",
+  "start": "Hello guys, welcome!",
   "hero": {
     "position": "Front-end development",
     "description": [
@@ -8,7 +9,8 @@
       "正朝着Node.js全栈开发方向学习与发展",
       "我喜欢骑行和健身,它们使我保持健康和放松心情",
       "我坚信,通过不断学习和实践,我能够实现自己的目标"
-    ]
+    ],
+    "signature": "Enjoy Yourself"
   },
   "navigation": [
     {

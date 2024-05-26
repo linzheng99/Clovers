@@ -27,7 +27,7 @@ export default function AboutMeComp() {
         className="mb-6 lg:pt-[5.5rem]"
       >
         <h1 className="text-3xl lg:text-6xl font-thin tracking-tighter">
-          Hello guys, welcome!
+          {appConfig.start}
         </h1>
       </motion.div>
       <div className="flex flex-col items-end lg:mt-40">
@@ -57,7 +57,7 @@ export default function AboutMeComp() {
         <span className='jumping-element text-2xl'>
           <EaseInOut initialY={40}>
             <div className='flex flex-col justify-center items-center'>
-              <span className='text-xs'>去享受生活,热爱生活</span>
+              <span className='text-xs'>{appConfig.hero.signature}</span>
               <DownIcon />
             </div>
           </EaseInOut>
