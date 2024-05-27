@@ -1,4 +1,6 @@
-import {defineType, defineArrayMember} from 'sanity'
+import { defineArrayMember, defineType } from 'sanity'
+
+import { Tweet } from '~/sanity/components/Tweet'
 
 /**
  * This is the schema type for block content used in the post document type
@@ -12,7 +14,7 @@ import {defineType, defineArrayMember} from 'sanity'
  */
 
 export default defineType({
-  title: 'Block Content',
+  title: '块级富文本',
   name: 'blockContent',
   type: 'array',
   of: [
@@ -23,32 +25,40 @@ export default defineType({
       // set corresponds with HTML tags, but you can set any title or value
       // you want, and decide how you want to deal with it where you want to
       // use your content.
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
       styles: [
-        {title: 'Normal', value: 'normal'},
-        {title: 'H1', value: 'h1'},
-        {title: 'H2', value: 'h2'},
-        {title: 'H3', value: 'h3'},
-        {title: 'H4', value: 'h4'},
-        {title: 'Quote', value: 'blockquote'},
+        { title: '正文', value: 'normal' },
+        { title: 'H1', value: 'h1' },
+        { title: 'H2', value: 'h2' },
+        { title: 'H3', value: 'h3' },
+        { title: 'H4', value: 'h4' },
+        { title: '引用', value: 'blockquote' },
       ],
-      lists: [{title: 'Bullet', value: 'bullet'}],
+      lists: [
+        { title: '无序列表', value: 'bullet' },
+        { title: '有序列表', value: 'number' },
+      ],
       // Marks let you mark up inline text in the Portable Text Editor
       marks: {
         // Decorators usually describe a single property – e.g. a typographic
         // preference or highlighting
         decorators: [
-          {title: 'Strong', value: 'strong'},
-          {title: 'Emphasis', value: 'em'},
+          { title: '加粗', value: 'strong' },
+          { title: '斜体', value: 'em' },
+          { title: '下划线', value: 'underline' },
+          { title: '删除线', value: 'strike-through' },
+          { title: '代码', value: 'code' },
         ],
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
           {
-            title: 'URL',
+            title: '链接',
             name: 'link',
             type: 'object',
             fields: [
               {
-                title: 'URL',
+                title: '链接',
                 name: 'href',
                 type: 'url',
               },
@@ -62,14 +72,53 @@ export default defineType({
     // as a block type.
     defineArrayMember({
       type: 'image',
-      options: {hotspot: true},
+      title: '图片',
+      options: { hotspot: true },
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
       fields: [
         {
           name: 'alt',
           type: 'string',
-          title: 'Alternative Text',
-        }
-      ]
+          title: '替代文本',
+        },
+        {
+          name: 'label',
+          type: 'string',
+          title: '标注',
+        },
+      ],
+    }),
+    defineArrayMember({
+      type: 'object',
+      name: 'tweet',
+      title: '推文',
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      fields: [
+        {
+          name: 'id',
+          type: 'string',
+          title: '推文 ID',
+        },
+      ],
+      components: {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        preview: Tweet as any,
+      },
+      preview: {
+        select: {
+          id: 'id',
+        },
+      },
+    }),
+    defineArrayMember({
+      type: 'code',
+      name: 'codeBlock',
+      title: '代码块',
+      options: {
+        withFilename: true,
+      },
     }),
   ],
 })
