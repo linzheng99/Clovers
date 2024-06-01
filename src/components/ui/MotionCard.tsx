@@ -28,7 +28,7 @@ export default function MotionCard({ post }: { post: Post }) {
         >
           <div>
             <h6 className='mb-2 font-semibold' >{title}</h6>
-            <p className='mb-2 text-neutral-400'>{description}</p>
+            <p className='mb-2 text-neutral-400 text-ellipsis overflow-hidden text-nowrap'>{description}</p>
           </div>
           <div className='flex gap-12'>
             {

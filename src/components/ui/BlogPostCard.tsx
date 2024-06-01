@@ -15,7 +15,7 @@ export default function BlogPostCard({ post }: { post: Post }) {
     <MotionLink
       key={_id}
       href={`/blogs/${slug}`}
-      className='group border border-gray-500 rounded-2xl'
+      className='group border border-gray-500 rounded-3xl'
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{
@@ -24,25 +24,27 @@ export default function BlogPostCard({ post }: { post: Post }) {
         ease: [0, 0.71, 0.2, 1.01]
       }}
     >
-      {mainImage &&
-        <Image
-          src={mainImage}
-          alt={title}
-          width={750}
-          height={250}
-          className='object-cover rounded-t-2xl border border-gray-500'
-        />
-      }
-      <div className='flex flex-col p-2'>
+      <div className="relative aspect-[240/135] w-full">
+        {mainImage &&
+          <Image
+            src={mainImage}
+            alt={title}
+            className="rounded-t-3xl object-cover"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
+          />
+        }
+      </div>
+      <div className='flex flex-col p-4'>
         <h2 className='text-base font-bold tracking-tight opacity-70 transition-opacity group-hover:opacity-100 md:text-xl'>
           {title}
         </h2>
         <span className='flex justify-between opacity-50 transition-opacity group-hover:opacity-100'>
           <span>
-            {categories}
+            {publishedAt && dayjs(publishedAt).format('YYYY-MM-DD')}
           </span>
           <span>
-            {publishedAt && dayjs(publishedAt).format('YYYY-MM-DD')}
+            {categories}
           </span>
         </span>
       </div>
