@@ -6,6 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { type Post } from "~/sanity/types";
+import { BookIcon } from "~/src/assets/icons/BookIcon";
+import { TimeIcon } from "~/src/assets/icons/TimeIcon";
 
 export default function BlogPostCard({ post }: { post: Post }) {
   const { _id, slug, mainImage, title, categories, publishedAt } = post
@@ -39,12 +41,12 @@ export default function BlogPostCard({ post }: { post: Post }) {
         <h2 className='text-base font-bold tracking-tight opacity-70 transition-opacity group-hover:opacity-100 md:text-xl'>
           {title}
         </h2>
-        <span className='flex justify-between opacity-50 transition-opacity group-hover:opacity-100'>
-          <span>
-            {publishedAt && dayjs(publishedAt).format('YYYY-MM-DD')}
+        <span className='flex justify-between opacity-50 transition-opacity group-hover:opacity-100 text-[12px] md:text-sm'>
+          <span className="flex items-center gap-1">
+            <TimeIcon /> {publishedAt && dayjs(publishedAt).format('YYYY-MM-DD')}
           </span>
-          <span>
-            {categories}
+          <span className="flex items-center gap-1">
+            <BookIcon /> {categories}
           </span>
         </span>
       </div>
