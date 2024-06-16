@@ -1,4 +1,5 @@
 import "./globals.css";
+import './prism.css'
 import '@radix-ui/themes/styles.css';
 
 import { Theme } from "@radix-ui/themes";
@@ -21,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Theme className="h-full dark">
+        <Theme className="h-full ">
           {children}
         </Theme>
       </body>
