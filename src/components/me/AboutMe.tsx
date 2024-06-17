@@ -40,7 +40,7 @@ export default function AboutMeComp() {
           <span className='text-end'>
             I&apos;m a
           </span>
-          <span className="text-end font-bold bg-gradient-to-r from-[#FF96F9] via-[#d65fcf] to-[#C32BAC] bg-clip-text text-transparent">
+          <span className="text-end font-bold bg-gradient-to-r from-[#C32BAC] via-[#d65fcf] to-[#FF96F9] bg-clip-text text-transparent">
             {appConfig.hero.position}
           </span>
         </motion.h1>

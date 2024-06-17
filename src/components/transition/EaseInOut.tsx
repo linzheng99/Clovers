@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function EaseInOutTransition({
   children,
-  initialY = 20
+  initialY = 20,
 }: Readonly<{
   children: React.ReactNode;
   initialY?: number

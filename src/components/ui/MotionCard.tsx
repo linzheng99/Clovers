@@ -33,7 +33,7 @@ export default function MotionCard({ post }: { post: Post }) {
           <div className='flex gap-12'>
             {
               categories?.map(
-                (i, index) => <span key={index} className='rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-800'>{i}</span>
+                (i, index) => <span key={index} className='rounded dark:bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-800 border border-neutral-700/40'>{i}</span>
               )
             }
           </div>
